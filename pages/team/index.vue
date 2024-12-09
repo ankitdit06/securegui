@@ -76,7 +76,7 @@ export default {
     async fetchTeams() {
       this.loading = true;
       try {
-        const response = await fetch(`http://localhost:9090/Team/List`);
+        const response = await fetch(`http://217.160.221.142:9090/Team/List`);
         const data = await response.json();
         this.teams = data;  // Assuming the API returns a list of users
       } catch (error) {

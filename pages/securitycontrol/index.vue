@@ -114,7 +114,7 @@ export default {
 
     async postData(inputSecControlCon,inputRisk) {
       // Replace the URL with the actual endpoint
-      const url = 'http://localhost:9090/SecurityControl/Create';
+      const url = 'http://217.160.221.142:9090/SecurityControl/Create';
       const data = { name: inputSecControlCon,risk:inputRisk };
 
       // Make a POST request using fetch API
