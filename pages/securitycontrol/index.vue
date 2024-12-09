@@ -76,7 +76,7 @@ export default {
     async fetchSecControl() {
       this.loading = true;
       try {
-        const response = await fetch(`http://localhost:9090/SecurityControl/List`);
+        const response = await fetch(`http://217.160.221.142:9090/SecurityControl/List`);
         const data = await response.json();
         this.teams = data;  // Assuming the API returns a list of users
       } catch (error) {

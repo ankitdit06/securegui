@@ -177,7 +177,7 @@ export default {
 
       this.loading = true;
       try {
-        const response = await fetch('http://localhost:9090/Component/'+serId); // Replace with your API URL
+        const response = await fetch('http://217.160.221.142:9090/Component/'+serId); // Replace with your API URL
         const data = await response.json();
         //alert(JSON.stringify(data))
         // Assign product information data

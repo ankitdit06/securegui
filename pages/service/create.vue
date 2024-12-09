@@ -263,7 +263,7 @@ export default {
   async fetchTeams() {
     this.loading = true;
     try {
-      const response = await fetch(`http://localhost:9090/Team/List`);
+      const response = await fetch(`http://217.160.221.142:9090/Team/List`);
       const data = await response.json();
       this.teams = data;  // Assuming the API returns a list of users
     } catch (error) {
@@ -326,7 +326,7 @@ export default {
 
     async postData(data) {
       // Replace the URL with the actual endpoint
-      const url = 'http://localhost:9090/Service/Create';
+      const url = 'http://217.160.221.142:9090/Service/Create';
 
       // Make a POST request using fetch API
       const response = await fetch(url, {

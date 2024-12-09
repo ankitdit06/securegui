@@ -113,7 +113,7 @@ export default {
 
     async postData(inputText) {
       // Replace the URL with the actual endpoint
-      const url = 'http://localhost:9090/Team/Create';
+      const url = 'http://217.160.221.142:9090/Team/Create';
       const data = { name: inputText };
 
       // Make a POST request using fetch API

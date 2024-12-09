@@ -335,7 +335,7 @@ export default {
 
     try {
       // Replace with your API URL
-      const response = await fetch("http://localhost:9090/Service/SecurityControl/"+serId);
+      const response = await fetch("http://217.160.221.142:9090/Service/SecurityControl/"+serId);
 
       if (!response.ok) {
         throw new Error(`Error: ${response.status} ${response.statusText}`);
@@ -361,7 +361,7 @@ export default {
 
       this.loading = true;
       try {
-        const response = await fetch('http://localhost:9090/Service/'+serId); // Replace with your API URL
+        const response = await fetch('http://217.160.221.142:9090/Service/'+serId); // Replace with your API URL
         const data = await response.json();
         //alert(JSON.stringify(data))
         // Assign product information data
@@ -425,7 +425,7 @@ export default {
 
     async postData(selectItems) {
       // Replace the URL with the actual endpoint
-      const url = 'http://localhost:9090/SecurityControl/AddService';
+      const url = 'http://217.160.221.142:9090/SecurityControl/AddService';
       const data = selectItems;
 
       // Make a POST request using fetch API

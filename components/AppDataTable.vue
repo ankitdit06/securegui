@@ -124,7 +124,7 @@ const params = new URLSearchParams({
 });
 
 try {
-  const response = await fetch(`http://localhost:9090/Service/List?${params}`);
+  const response = await fetch(`http://217.160.221.142:9090/Service/List?${params}`);
   const data = await response.json();
 
   this.items = data; // Assuming response is a JSON array

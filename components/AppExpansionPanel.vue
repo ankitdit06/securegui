@@ -71,7 +71,7 @@ export default {
     var serId=sid.params.id
 
       try {
-        const response = await fetch('http://localhost:9090/Component/Service/'+serId); // Replace with your API URL
+        const response = await fetch('http://217.160.221.142:9090/Component/Service/'+serId); // Replace with your API URL
         const data = await response.json();
         this.items = data; // Assign fetched data to items array
       } catch (error) {

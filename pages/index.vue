@@ -149,7 +149,7 @@ export default {
 
     try {
       // Replace with your API URL
-      const response = await fetch("http://localhost:9090/Dashboard");
+      const response = await fetch("http://217.160.221.142:9090/Dashboard");
 
       if (!response.ok) {
         throw new Error(`Error: ${response.status} ${response.statusText}`);
