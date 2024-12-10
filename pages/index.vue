@@ -39,15 +39,7 @@
     <!-- Dashboard Row 2 -->
     <v-row>
       <!-- Card 4: Monthly Overview with Chart -->
-      <v-col cols="12" md="6">
-        <v-card class="pa-4" elevation="2">
-          <v-card-title>SecurityControls</v-card-title>
-          <v-card-text>
-            <line-chart :data="monthlyData" :options="chartOptions" />
-          </v-card-text>
-        </v-card>
-      </v-col>
-
+    
       <!-- Card 5: Activity -->
       <v-col cols="12" md="6">
         <v-card class="pa-4" elevation="2">

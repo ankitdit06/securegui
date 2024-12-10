@@ -220,6 +220,17 @@
         readonly
         ></v-text-field>
         </v-col>
+        <v-col cols="6">
+        <v-text-field
+        label="Status"
+        v-model="service.reviewsummary"
+
+        outlined
+        dense
+        clearable
+        readonly
+        ></v-text-field>
+        </v-col>
 
         </v-row>
 

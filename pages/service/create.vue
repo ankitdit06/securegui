@@ -92,8 +92,8 @@
         <v-col cols="6">
           <v-select
             label="Data Classification"
-            v-model="formData.audits.dataClassification"
-            :items="['Low', 'Medium', 'High']"
+            v-model="formData.audits.data_classification"
+            :items="['Internal', 'Secret', 'Public']"
             outlined
             dense
             clearable
@@ -134,7 +134,7 @@
         <v-col cols="6">
           <v-select
             label="Business Impact"
-            v-model="formData.audits.businessImpact"
+            v-model="formData.audits.business_impact"
             :items="['High', 'Medium', 'Low']"
             outlined
             dense
@@ -155,7 +155,7 @@
        <v-col cols="12">
          <v-textarea
            label="Remarks"
-           v-model="formData.audits.remarks"
+           v-model="formData.audits.reviewsummary"
            outlined
            dense
            clearable
@@ -236,13 +236,13 @@ export default {
         name: "",
         release: "",
         publicFacing: "",
-        dataClassification: "",
         audits: {
-        dataClassification: "",
+        business_impact:"",
+        data_classification: "",
         confidentiality: "",
         integrity: "",
         avaibility: "",
-        remarks: "",
+        reviewsummary: "",
         },
         keyValuePairs: [],
       },
@@ -294,7 +294,7 @@ export default {
           audits: [this.formData.audits],
         };
         //submitData(JSON.stringify(formDataWithKeyValue, null, 2))
-      alert("Form Submitted!\n" + JSON.stringify(formDataWithKeyValue, null, 2));
+    //  alert("Form Submitted!\n" + JSON.stringify(formDataWithKeyValue, null, 2));
       }
     },
 
@@ -316,6 +316,8 @@ export default {
       //  alert("Form Submitted!\n" + JSON.stringify(formDataWithKeyValue, null, 2));
       }
         const response = await this.postData(inputText); // Awaiting the POST request response
+
+          this.$router.push(response.id);
         this.showAlert('Service Created successfully!', 'success');
       } catch (error) {
         console.error('Error submitting data:', error);
